@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1-Minute English Monologue | 직장인 1분 영어 혼잣말 첨삭 & 단어장</title>
+  
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#EEF2FF',
+              100: '#E0E7FF',
+              400: '#818CF8',
+              500: '#6366F1',
+              600: '#4F46E5',
+              700: '#4338CA',
+            },
+            surface: {
+              dark: '#0B0F19',
+              darker: '#060911',
+              card: '#111827',
+              border: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          fontFamily: {
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- React 18, ReactDOM, Babel Standalone -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      letter-spacing: -0.015em;
+    }
+    
+    /* 3D Flip Card Effect */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-preserve-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+    .dark ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(156, 163, 175, 0.4);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(156, 163, 175, 0.6);
+    }
+
+    /* Audio wave pulsation */
+    @keyframes pulse-wave {
+      0%, 100% { height: 6px; }
+      50% { height: 28px; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-[#090D16] dark:text-slate-100 min-h-screen transition-colors duration-200">
+  <div id="root"></div>
+
+  <!-- Lucide SVG Icons Library Helper -->
+  <script>
+    window.SVG_ICONS = {
+      mic: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>',
+      micOff: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="2" y2="22"/><path d="M18.89 13.23A7.12 7.12 0 0 0 19 12v-2"/><path d="M5 10v2a7 7 0 0 0 12 5"/><path d="M15 9.34V5a3 3 0 0 0-5.68-1.33"/><path d="M9 9v3a3 3 0 0 0 5.12 2.12"/><line x1="12" x2="12" y1="19" y2="22"/></svg>',
+      square: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><rect width="18" height="18" x="3" y="3" rx="2"/></svg>',
+      play: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>',
+      volume2: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>',
+      refreshCw: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>',
+      dice: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M15 9h.01"/><path d="M9 9h.01"/><path d="M15 15h.01"/><path d="M9 15h.01"/><path d="M12 12h.01"/></svg>',
+      sparkles: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>',
+      flame: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+      copy: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>',
+      check: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>',
+      settings: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>',
+      moon: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>',
+      sun: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>',
+      bookOpen: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+      calendar: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>',
+      plus: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>',
+      trash: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>',
+      download: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>',
+      upload: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>',
+      chevronLeft: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>',
+      chevronRight: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>',
+      rotate: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>',
+      helpCircle: '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>',
+      award: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>'
+    };
+
+    function Icon({ name, className = "" }) {
+      const svg = window.SVG_ICONS[name] || '';
+      return React.createElement('span', {
+        className: `inline-flex items-center justify-center ${className}`,
+        dangerouslySetInnerHTML: { __html: svg }
+      });
+    }
+  </script>
+
+  <!-- Main Application Script (Babel) -->
+  <script type="text/babel">
+    const { useState, useEffect, useRef, useMemo } = React;
+
+    // --- CURATED PRESET TOPICS ---
+    const PRESET_TOPICS = [
+      // 직장생활 & 비즈니스
+      { category: "직장생활 & 비즈니스", question: "오늘 업무 중 가장 뿌듯했거나 짜증 났던 순간은?", subtext: "What was the most rewarding or frustrating moment at work today?" },
+      { category: "직장생활 & 비즈니스", question: "내가 생각하는 '일 잘하는 동료'의 가장 중요한 특징은?", subtext: "What is the key trait of a competent colleague in your opinion?" },
+      { category: "직장생활 & 비즈니스", question: "갑자기 긴급한 미팅이나 프로젝트 마감 변경이 생겼을 때 나의 대처법은?", subtext: "How do you handle sudden urgent meetings or shifting deadlines?" },
+      { category: "직장생활 & 비즈니스", question: "재택근무(원격근무) vs 사무실 출근, 나에게 더 잘 맞는 방식과 이유는?", subtext: "Remote work vs office work: Which fits you better and why?" },
+      { category: "직장생활 & 비즈니스", question: "직장 상사나 팀원에게 건설적인 피드백을 전달할 때 나만의 요령은?", subtext: "How do you give constructive feedback to bosses or peers?" },
+      { category: "직장생활 & 비즈니스", question: "퇴근 후 온전히 업무 생각을 끄기 위해(Work-Life 분리) 내가 하는 루틴은?", subtext: "What do you do to switch off from work after hours?" },
+      
+      // 일상 & 취미
+      { category: "일상 & 취미", question: "이번 주말에 꼭 하고 싶은 나만의 힐링 휴식 계획은?", subtext: "What is your dream relaxation plan for this upcoming weekend?" },
+      { category: "일상 & 취미", question: "최근에 본 영화나 드라마 중 주변에 강력 추천하고 싶은 작품은?", subtext: "What movie or series have you enjoyed lately and would recommend?" },
+      { category: "일상 & 취미", question: "아침에 일어나서 집을 나서기 전까지 나만의 모닝 루틴은?", subtext: "Walk me through your typical morning routine before leaving home." },
+      { category: "일상 & 취미", question: "스트레스가 극에 달했을 때 나만의 확실한 기분 전환 음식이나 행동은?", subtext: "What is your go-to comfort food or activity when feeling stressed?" },
+      { category: "일상 & 취미", question: "최근 새롭게 배우기 시작했거나 도전해보고 싶은 새로운 취미는?", subtext: "What is a new hobby you've started or want to try soon?" },
+      
+      // 재테크 & 트렌드
+      { category: "재테크 & 트렌드", question: "최근 관심 있게 지켜보고 있는 경제 뉴스나 투자 대상은?", subtext: "What economic news or investment asset caught your attention lately?" },
+      { category: "재테크 & 트렌드", question: "ChatGPT나 생성형 AI 기술이 내 실제 일상과 업무를 어떻게 바꾸고 있나요?", subtext: "How is generative AI like ChatGPT changing your daily work?" },
+      { category: "재테크 & 트렌드", question: "올해 세운 재정 목표(저축, 지출 줄이기, 투자)와 실천 상황은?", subtext: "What is your main financial goal this year and how is it going?" },
+      { category: "재테크 & 트렌드", question: "내가 생각하는 가성비 최고의 소비 vs 돈이 아까웠던 소비 경험은?", subtext: "What was your best value purchase vs biggest waste of money recently?" },
+      
+      // 오픽(OPIc) 돌발 주제
+      { category: "오픽(OPIc) 돌발 주제", question: "업무나 일상에서 겪은 예상치 못한 기술적 문제(인터넷/노트북 고장 등)와 해결 경험은?", subtext: "Describe an unexpected tech issue you faced and how you solved it." },
+      { category: "오픽(OPIc) 돌발 주제", question: "여행 중 길을 잃거나 날씨 때문에 계획이 완전히 틀어졌던 기억은?", subtext: "Tell me about a time your travel plan went wrong due to weather or being lost." },
+      { category: "오픽(OPIc) 돌발 주제", question: "이웃이나 룸메이트와 사소한 갈등이 생겼을 때 어떻게 해결했나요?", subtext: "How did you resolve a minor dispute with a neighbor or roommate?" },
+      { category: "오픽(OPIc) 돌발 주제", question: "어릴 적 기억에 남는 특별한 명절이나 가족 행사 경험을 묘사해주세요.", subtext: "Describe a memorable holiday or family gathering from your childhood." }
+    ];
+
+    const CATEGORIES = ["전체", "직장생활 & 비즈니스", "일상 & 취미", "재테크 & 트렌드", "오픽(OPIc) 돌발 주제"];
+
+    // Default Mock AI feedback for instant testing with no API Key
+    const MOCK_FEEDBACKS = [
+      {
+        intent_summary: "오늘 갑자기 마감일이 앞당겨져 야근을 하게 되었고, 예측 불가능한 일정 변경 때문에 몹시 지치고 답답했다는 감정을 전하고자 함.",
+        casual_rewriting: "My boss moved the deadline up out of nowhere today, which totally threw off my schedule and forced me to pull an involuntary late night.",
+        casual_korean: "오늘 상사가 마감일을 뜬금없이 앞당기는 바람에 일정이 꼬여서 어쩔 수 없이 야근을 해야 했어.",
+        business_rewriting: "Due to an abrupt adjustment in the project timeline announced earlier today, I had to put in extra hours to ensure we remain aligned with deliverables.",
+        business_korean: "금일 발표된 프로젝트 일정 단축으로 인해 납기 일정을 차질 없이 준수하고자 불가피하게 연장 근무를 진행했습니다.",
+        corrections: [
+          {
+            original_phrase: "boss suddenly change deadline",
+            native_phrase: "moved the deadline up out of nowhere",
+            explanation: "'change suddenly'는 의미는 통하지만, 기한을 '앞당기다'는 'move up the deadline', 예고 없이 들이닥칠 때는 'out of nowhere'가 훨씬 생생합니다."
+          },
+          {
+            original_phrase: "so I must work hard night",
+            native_phrase: "forced me to pull an involuntary late night",
+            explanation: "야근하다는 'work overtime' 또는 캐주얼하게 'pull a late night / pull an all-nighter'로 표현하면 원어민 뉘앙스가 살아납니다."
+          }
+        ],
+        key_vocab: [
+          { expression: "move up [a deadline]", meaning: "(일정·마감 등을) 앞당기다", example: "Management decided to move up the launch date by two weeks." },
+          { expression: "out of nowhere", meaning: "난데없이, 뜬금없이", example: "Urgent requests came in out of nowhere right before 6 PM." },
+          { expression: "throw off [schedule]", meaning: "일정의 균형을 깨뜨리다, 차질을 빚다", example: "The unexpected software glitch totally threw off our morning demo." }
+        ]
+      }
+    ];
+
+    // Helper: LocalStorage wrapper
+    const Storage = {
+      get: (key, fallback) => {
+        try {
+          const val = localStorage.getItem(key);
+          return val ? JSON.parse(val) : fallback;
+        } catch {
+          return fallback;
+        }
+      },
+      set: (key, val) => {
+        try {
+          localStorage.setItem(key, JSON.stringify(val));
+        } catch (e) {
+          console.error("Storage save failed", e);
+        }
+      }
+    };
+
+    // Helper: Text-to-Speech Playback
+    function playTTS(text) {
+      if (!window.speechSynthesis) {
+        alert("이 브라우저는 음성 합성(TTS)을 지원하지 않습니다.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const clean = text.replace(/[*_~`]/g, '');
+      const utterance = new SpeechSynthesisUtterance(clean);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.95;
+      
+      const voices = window.speechSynthesis.getVoices();
+      const enVoice = voices.find(v => v.lang.startsWith('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Daniel')));
+      if (enVoice) utterance.voice = enVoice;
+      
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Helper: Play chime audio via Web Audio API
+    function playChime() {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+        osc.frequency.setValueAtTime(880, ctx.currentTime + 0.15); // A5
+        gain.gain.setValueAtTime(0.15, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.8);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.85);
+      } catch (e) {}
+    }
+
+    // --- MAIN APP COMPONENT ---
+    function App() {
+      // Navigation Tab: 'speaking' | 'flashcards' | 'history'
+      const [currentTab, setCurrentTab] = useState('speaking');
+      
+      // Theme State: 'dark' | 'light'
+      const [theme, setTheme] = useState(() => Storage.get('monologue_theme', 'dark'));
+      
+      // Settings Modal State
+      const [showSettings, setShowSettings] = useState(false);
+      const [settings, setSettings] = useState(() => Storage.get('monologue_settings', {
+        provider: 'gemini', // 'gemini' | 'openai' | 'demo'
+        geminiKey: '',
+        openaiKey: '',
+        model: 'gemini-2.5-flash'
+      }));
+
+      // Flashcards Data in localStorage
+      const [flashcards, setFlashcards] = useState(() => Storage.get('monologue_flashcards', [
+        {
+          id: 'card-1',
+          front: '상사나 클라이언트가 마감일을 난데없이 갑자기 앞당겼을 때',
+          back: 'move up the deadline out of nowhere',
+          example: 'My manager decided to move up the deadline out of nowhere.',
+          category: '직장생활 & 비즈니스',
+          memorized: false,
+          createdAt: new Date().toISOString()
+        },
+        {
+          id: 'card-2',
+          front: '갑작스러운 일 때문에 하루 스케줄이나 계획이 엉망으로 꼬였을 때',
+          back: 'throw off my entire schedule',
+          example: 'That 2-hour unexpected meeting totally threw off my schedule.',
+          category: '직장생활 & 비즈니스',
+          memorized: true,
+          createdAt: new Date().toISOString()
+        }
+      ]));
+
+      // History Sessions
+      const [history, setHistory] = useState(() => Storage.get('monologue_history', []));
+
+      // Streak Data
+      const [streakData, setStreakData] = useState(() => Storage.get('monologue_streak', {
+        count: 3,
+        lastDate: new Date().toISOString().slice(0, 10),
+        activeDays: [1, 2, 3] // Monday, Tuesday, Wednesday check
+      }));
+
+      // Toast Notification
+      const [toast, setToast] = useState(null);
+      const showToast = (msg, type = "info") => {
+        setToast({ msg, type });
+        setTimeout(() => setToast(null), 3200);
+      };
+
+      // Sync Theme
+      useEffect(() => {
+        Storage.set('monologue_theme', theme);
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }, [theme]);
+
+      // Save Data changes
+      useEffect(() => { Storage.set('monologue_flashcards', flashcards); }, [flashcards]);
+      useEffect(() => { Storage.set('monologue_history', history); }, [history]);
+      useEffect(() => { Storage.set('monologue_streak', streakData); }, [streakData]);
+      useEffect(() => { Storage.set('monologue_settings', settings); }, [settings]);
+
+      // Streak check on session completed
+      const recordSessionSuccess = (session) => {
+        const todayStr = new Date().toISOString().slice(0, 10);
+        const dayOfWeek = (new Date().getDay() + 6) % 7; // 0 = Mon, 6 = Sun
+        
+        let newCount = streakData.count;
+        if (streakData.lastDate !== todayStr) {
+          newCount += 1;
+        }
+        const updatedDays = Array.from(new Set([...(streakData.activeDays || []), dayOfWeek]));
+
+        setStreakData({
+          count: newCount,
+          lastDate: todayStr,
+          activeDays: updatedDays
+        });
+      };
+
+      return (
+        <div className="max-w-5xl mx-auto px-4 py-6 md:py-8 flex flex-col min-h-screen">
+          {/* HEADER */}
+          <header className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white shadow-lg shadow-brand-500/25">
+                <Icon name="mic" className="text-white" />
+              </div>
+              <div>
+                <h1 className="text-lg md:text-xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+                  1-Minute Monologue
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-brand-100 text-brand-700 dark:bg-brand-900/60 dark:text-brand-300 font-medium">
+                    직장인 영어 혼잣말
+                  </span>
+                </h1>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  매일 1분 스피킹 녹음 ➔ AI 3단계 원어민 첨삭 & 나만의 지식 노트
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2.5">
+              {/* Streak Badge */}
+              <div 
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-600 dark:text-amber-400 text-xs font-semibold shadow-sm cursor-pointer hover:scale-105 transition-transform"
+                title={`${streakData.count}일 연속 스피킹 중입니다!`}
+                onClick={() => setCurrentTab('history')}
+              >
+                <Icon name="flame" className="text-amber-500 animate-pulse" />
+                <span>{streakData.count}일 연속 달성</span>
+              </div>
+
+              {/* Theme Toggle */}
+              <button
+                onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')}
+                className="p-2 rounded-lg text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                title="테마 전환"
+              >
+                <Icon name={theme === 'dark' ? 'sun' : 'moon'} />
+              </button>
+
+              {/* Settings Modal Button */}
+              <button
+                onClick={() => setShowSettings(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              >
+                <Icon name="settings" />
+                <span className="hidden sm:inline">AI 설정</span>
+                {settings.provider === 'demo' && (
+                  <span className="w-2 h-2 rounded-full bg-amber-400" title="데모 모드 동작 중"></span>
+                )}
+                {settings.provider !== 'demo' && (
+                  <span className="w-2 h-2 rounded-full bg-emerald-400" title="API 연동 활성화"></span>
+                )}
+              </button>
+            </div>
+          </header>
+
+          {/* NAVIGATION TABS */}
+          <nav className="flex items-center justify-center my-6">
+            <div className="inline-flex p-1 bg-slate-200/80 dark:bg-slate-800/80 rounded-xl backdrop-blur-sm border border-slate-300/40 dark:border-slate-700/60 text-xs md:text-sm font-medium">
+              <button
+                onClick={() => setCurrentTab('speaking')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  currentTab === 'speaking'
+                    ? 'bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 font-semibold shadow-sm'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <Icon name="mic" />
+                <span>🎙️ 오늘의 1분 스피킹</span>
+              </button>
+
+              <button
+                onClick={() => setCurrentTab('flashcards')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  currentTab === 'flashcards'
+                    ? 'bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 font-semibold shadow-sm'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <Icon name="bookOpen" />
+                <span>🗂️ 복습 플래시카드</span>
+                <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300">
+                  {flashcards.length}
+                </span>
+              </button>
+
+              <button
+                onClick={() => setCurrentTab('history')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                  currentTab === 'history'
+                    ? 'bg-white dark:bg-slate-900 text-brand-600 dark:text-brand-400 font-semibold shadow-sm'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <Icon name="calendar" />
+                <span>📅 히스토리 & 통계</span>
+              </button>
+            </div>
+          </nav>
+
+          {/* MAIN TAB CONTENT */}
+          <main className="flex-1">
+            {currentTab === 'speaking' && (
+              <SpeakingTab
+                settings={settings}
+                onSaveCards={(newCards) => {
+                  setFlashcards(prev => [...newCards, ...prev]);
+                  showToast(`${newCards.length}개 표현이 플래시카드에 저장되었습니다!`, "success");
+                }}
+                onSessionComplete={(session) => {
+                  setHistory(prev => [session, ...prev]);
+                  recordSessionSuccess(session);
+                }}
+                showToast={showToast}
+                openSettings={() => setShowSettings(true)}
+              />
+            )}
+
+            {currentTab === 'flashcards' && (
+              <FlashcardsTab
+                flashcards={flashcards}
+                setFlashcards={setFlashcards}
+                showToast={showToast}
+              />
+            )}
+
+            {currentTab === 'history' && (
+              <HistoryTab
+                history={history}
+                setHistory={setHistory}
+                flashcards={flashcards}
+                streakData={streakData}
+                setStreakData={setStreakData}
+                showToast={showToast}
+              />
+            )}
+          </main>
+
+          {/* SETTINGS MODAL */}
+          {showSettings && (
+            <SettingsModal
+              settings={settings}
+              onSave={(newSettings) => {
+                setSettings(newSettings);
+                setShowSettings(false);
+                showToast("AI 설정이 저장되었습니다.", "success");
+              }}
+              onClose={() => setShowSettings(false)}
+            />
+          )}
+
+          {/* TOAST POPUP */}
+          {toast && (
+            <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-xl border border-slate-700/50 dark:border-slate-200 text-xs md:text-sm font-medium animate-bounce">
+              <Icon name="sparkles" className="text-brand-400 dark:text-brand-600" />
+              <span>{toast.msg}</span>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    // --- TAB 1: SPEAKING & AI FEEDBACK ---
+    function SpeakingTab({ settings, onSaveCards, onSessionComplete, showToast, openSettings }) {
+      // Step 1: Selected Topic State
+      const [selectedCategory, setSelectedCategory] = useState("전체");
+      const [currentTopic, setCurrentTopic] = useState(() => PRESET_TOPICS[0]);
+      const [isCustomTopic, setIsCustomTopic] = useState(false);
+      const [customTopicInput, setCustomTopicInput] = useState("");
+
+      // Step 2: Speaking & STT State
+      const [isRecording, setIsRecording] = useState(false);
+      const [timeLeft, setTimeLeft] = useState(60); // 60s countdown
+      const [transcript, setTranscript] = useState("");
+      const [interimText, setInterimText] = useState("");
+      const [isSTTSupported, setIsSTTSupported] = useState(true);
+      const [micVolume, setMicVolume] = useState(0); // for visualizer
+
+      // Step 3: AI Feedback Pipeline State
+      const [isLoadingAI, setIsLoadingAI] = useState(false);
+      const [feedbackData, setFeedbackData] = useState(null);
+      const [savedVocabIds, setSavedVocabIds] = useState(new Set());
+
+      // Audio & Speech Recognition Refs
+      const recognitionRef = useRef(null);
+      const timerIntervalRef = useRef(null);
+      const audioCtxRef = useRef(null);
+      const analyserRef = useRef(null);
+      const streamRef = useRef(null);
+      const animFrameRef = useRef(null);
+
+      // Filtered Topics
+      const availableTopics = useMemo(() => {
+        if (selectedCategory === "전체") return PRESET_TOPICS;
+        return PRESET_TOPICS.filter(t => t.category === selectedCategory);
+      }, [selectedCategory]);
+
+      // Random topic generator with animation
+      const pickRandomTopic = () => {
+        const pool = availableTopics;
+        const next = pool[Math.floor(Math.random() * pool.length)];
+        setCurrentTopic(next);
+        setIsCustomTopic(false);
+      };
+
+      // Check STT support on mount
+      useEffect(() => {
+        const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRec) {
+          setIsSTTSupported(false);
+        }
+      }, []);
+
+      // Start Microphone & Real-time Web Audio Visualizer
+      const startMicrophoneAudio = async () => {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          streamRef.current = stream;
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          const audioCtx = new AudioContext();
+          audioCtxRef.current = audioCtx;
+          const analyser = audioCtx.createAnalyser();
+          analyser.fftSize = 64;
+          analyserRef.current = analyser;
+          const source = audioCtx.createMediaStreamSource(stream);
+          source.connect(analyser);
+
+          const dataArray = new Uint8Array(analyser.frequencyBinCount);
+          const updateVolume = () => {
+            if (!analyserRef.current) return;
+            analyserRef.current.getByteFrequencyData(dataArray);
+            let sum = 0;
+            for (let i = 0; i < dataArray.length; i++) {
+              sum += dataArray[i];
+            }
+            const avg = sum / dataArray.length;
+            setMicVolume(Math.min(100, Math.round(avg * 1.5)));
+            animFrameRef.current = requestAnimationFrame(updateVolume);
+          };
+          updateVolume();
+        } catch (err) {
+          console.warn("Microphone access for visualizer failed:", err);
+        }
+      };
+
+      const stopMicrophoneAudio = () => {
+        if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+        if (streamRef.current) {
+          streamRef.current.getTracks().forEach(t => t.stop());
+        }
+        if (audioCtxRef.current && audioCtxRef.current.state !== 'closed') {
+          audioCtxRef.current.close();
+        }
+        setMicVolume(0);
+      };
+
+      // Start 60-Second Speaking & STT Session
+      const startRecording = () => {
+        const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (!SpeechRec) {
+          alert("이 브라우저는 음성 인식(STT)을 지원하지 않습니다. 텍스트 박스에 직접 타이핑해주세요!");
+          return;
+        }
+
+        setTranscript("");
+        setInterimText("");
+        setTimeLeft(60);
+        setIsRecording(true);
+        setFeedbackData(null);
+        setSavedVocabIds(new Set());
+
+        startMicrophoneAudio();
+
+        try {
+          const rec = new SpeechRec();
+          rec.continuous = true;
+          rec.interimResults = true;
+          rec.lang = 'en-US';
+
+          rec.onresult = (event) => {
+            let interim = '';
+            let final = '';
+            for (let i = event.resultIndex; i < event.results.length; i++) {
+              const text = event.results[i][0].transcript;
+              if (event.results[i].isFinal) {
+                final += text + ' ';
+              } else {
+                interim += text;
+              }
+            }
+            if (final) {
+              setTranscript(prev => (prev + ' ' + final).trim());
+            }
+            setInterimText(interim);
+          };
+
+          rec.onerror = (e) => {
+            console.error("STT Error:", e);
+            if (e.error === 'not-allowed') {
+              showToast("마이크 권한이 허용되지 않았습니다. 브라우저 설정에서 마이크를 허용해주세요.", "error");
+            }
+          };
+
+          rec.onend = () => {
+            // Keep active if user still has time
+            if (isRecording && timeLeft > 0) {
+              try { rec.start(); } catch {}
+            }
+          };
+
+          rec.start();
+          recognitionRef.current = rec;
+        } catch (e) {
+          console.error("Failed to start SpeechRecognition", e);
+        }
+
+        // Start Countdown Timer
+        clearInterval(timerIntervalRef.current);
+        timerIntervalRef.current = setInterval(() => {
+          setTimeLeft(prev => {
+            if (prev <= 1) {
+              stopRecording();
+              playChime();
+              return 0;
+            }
+            return prev - 1;
+          });
+        }, 1000);
+      };
+
+      // Stop Recording & Prepare for Editing
+      const stopRecording = () => {
+        setIsRecording(false);
+        clearInterval(timerIntervalRef.current);
+        if (recognitionRef.current) {
+          try { recognitionRef.current.stop(); } catch {}
+        }
+        stopMicrophoneAudio();
+        setInterimText("");
+      };
+
+      // Clean up on unmount
+      useEffect(() => {
+        return () => {
+          clearInterval(timerIntervalRef.current);
+          if (recognitionRef.current) {
+            try { recognitionRef.current.stop(); } catch {}
+          }
+          stopMicrophoneAudio();
+        };
+      }, []);
+
+      // Reset everything to start over
+      const resetSession = () => {
+        stopRecording();
+        setTimeLeft(60);
+        setTranscript("");
+        setInterimText("");
+        setFeedbackData(null);
+      };
+
+      // Execute AI 3-Step Feedback Pipeline
+      const requestAIFeedback = async () => {
+        const fullText = (transcript + " " + interimText).trim();
+        if (!fullText) {
+          showToast("녹음된 내용이나 입력한 텍스트가 없습니다. 먼저 자유롭게 말하거나 타이핑해주세요!", "warning");
+          return;
+        }
+
+        setIsLoadingAI(true);
+        const topicQuestion = isCustomTopic ? customTopicInput : currentTopic.question;
+
+        try {
+          if (settings.provider === 'demo' || (!settings.geminiKey && !settings.openaiKey)) {
+            // Use realistic mock data
+            await new Promise(r => setTimeout(r, 1400));
+            // Personalize mock response based on text keywords
+            const mock = { ...MOCK_FEEDBACKS[0] };
+            if (fullText.includes("meeting") || fullText.includes("회의") || fullText.includes("cancel")) {
+              mock.intent_summary = "갑작스러운 일정 변동이나 회의 취소로 당혹스러웠던 상황을 전달하고자 함.";
+            } else if (fullText.includes("invest") || fullText.includes("stock") || fullText.includes("주식")) {
+              mock.intent_summary = "최근 관심 있는 주식이나 경제 흐름에 대해 조심스럽게 투자 의견을 표현하고자 함.";
+              mock.casual_rewriting = "I've been keeping a close eye on the recent tech stocks lately, but market volatility has kept me on the sidelines.";
+              mock.business_rewriting = "Given the current macroeconomic volatility, I am maintaining a cautious stance while monitoring tech sector valuations.";
+            }
+            setFeedbackData(mock);
+            onSessionComplete({
+              id: 'session-' + Date.now(),
+              date: new Date().toISOString(),
+              topic: topicQuestion,
+              category: currentTopic.category,
+              rawText: fullText,
+              feedback: mock
+            });
+            showToast("첨삭이 완료되었습니다! (데모 모드)", "success");
+          } else if (settings.provider === 'gemini') {
+            // Call Google Gemini API
+            const res = await callGeminiAPI(settings.geminiKey, topicQuestion, fullText);
+            setFeedbackData(res);
+            onSessionComplete({
+              id: 'session-' + Date.now(),
+              date: new Date().toISOString(),
+              topic: topicQuestion,
+              category: currentTopic.category,
+              rawText: fullText,
+              feedback: res
+            });
+            showToast("Gemini 3단계 심층 첨삭이 완료되었습니다!", "success");
+          } else if (settings.provider === 'openai') {
+            // Call OpenAI API
+            const res = await callOpenAIAPI(settings.openaiKey, topicQuestion, fullText);
+            setFeedbackData(res);
+            onSessionComplete({
+              id: 'session-' + Date.now(),
+              date: new Date().toISOString(),
+              topic: topicQuestion,
+              category: currentTopic.category,
+              rawText: fullText,
+              feedback: res
+            });
+            showToast("OpenAI 심층 첨삭이 완료되었습니다!", "success");
+          }
+        } catch (err) {
+          console.error("AI Error:", err);
+          showToast(`첨삭 호출 실패: ${err.message}. 데모 모드로 전환하거나 API Key를 확인해주세요.`, "error");
+        } finally {
+          setIsLoadingAI(false);
+        }
+      };
+
+      // API Caller: Google Gemini REST
+      const callGeminiAPI = async (apiKey, topic, rawSpeech) => {
+        const prompt = `
+당신은 한국인 직장인을 위한 최고 권위의 1:1 영어 스피킹 코치입니다.
+사용자가 1분 동안 주어진 주제에 대해 영어로 혼잣말한 내용(STT 텍스트)입니다.
+발화자가 말문이 막혀 한국어 단어나 문장을 섞어 말했을 수도 있습니다.
+반드시 아래 JSON 스키마를 만족하는 순수 JSON 형식으로만 응답하세요. 백틱(\`\`\`json) 기호 없이 JSON만 반환하세요.
+
+주제: ${topic}
+사용자의 발화 원문:
+"""
+${rawSpeech}
+"""
+
+[반드시 생성할 JSON 응답 형식]:
+{
+  "intent_summary": "사용자가 어설프게 말했거나 한/영 혼용으로 말한 부분에서 원래 표현하고 싶었던 핵심 의도를 명확한 한국어 1~2문장으로 요약",
+  "casual_rewriting": "동료와 편하게 스몰토크할 때 쓸 수 있는 원어민스러운 자연스러운 구어체 영어 문장 (1~2문장)",
+  "casual_korean": "캐주얼 문장의 자연스러운 한국어 번역",
+  "business_rewriting": "비즈니스 미팅, 발표, 또는 OPIc AL 등급에 어울리는 세련되고 논리적인 직장인 영어 표현 (1~2문장)",
+  "business_korean": "비즈니스 문장의 품격 있는 한국어 번역",
+  "corrections": [
+    {
+      "original_phrase": "사용자가 쓴 어색한 콩글리시, 문법 오류 표현 또는 한국어로 적어둔 어구",
+      "native_phrase": "원어민이 실제로 사용하는 자연스러운 대체 영어 표현",
+      "explanation": "왜 어색했는지 뉘앙스 차이와 원어민적 표현 원리를 설명하는 원포인트 코칭 (한국어)"
+    }
+  ],
+  "key_vocab": [
+    {
+      "expression": "이 주제에서 반드시 써먹어야 할 핵심 구동사 또는 고급 관용구",
+      "meaning": "한국어 뜻",
+      "example": "이 주제와 밀접하게 연관된 실전 원어민 예문"
+    }
+  ]
+}
+`;
+
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: {
+              responseMimeType: "application/json",
+              temperature: 0.3
+            }
+          })
+        });
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData?.error?.message || `HTTP ${res.status}`);
+        }
+
+        const data = await res.json();
+        const rawJsonText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+        return JSON.parse(rawJsonText);
+      };
+
+      // API Caller: OpenAI REST
+      const callOpenAIAPI = async (apiKey, topic, rawSpeech) => {
+        const systemPrompt = `당신은 한국인 직장인을 위한 1:1 영어 스피킹 코치입니다. 사용자의 영어 혼잣말 원문(한/영 혼용 가능)을 분석하여 지정된 JSON 형식으로만 답변하세요.`;
+        const userPrompt = `
+주제: ${topic}
+사용자의 발화 원문:
+"""
+${rawSpeech}
+"""
+
+반드시 다음 JSON 키를 가진 JSON 객체로 응답하세요:
+{
+  "intent_summary": "한국어 의도 요약",
+  "casual_rewriting": "Natural Casual 영어 문장",
+  "casual_korean": "캐주얼 한국어 번역",
+  "business_rewriting": "Professional Business 영어 문장",
+  "business_korean": "비즈니스 한국어 번역",
+  "corrections": [
+    { "original_phrase": "어색한 부분", "native_phrase": "원어민 대체 표현", "explanation": "한국어 코칭" }
+  ],
+  "key_vocab": [
+    { "expression": "핵심 구동사/어휘", "meaning": "한국어 뜻", "example": "원어민 예문" }
+  ]
+}
+`;
+
+        const res = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            model: "gpt-4o-mini",
+            response_format: { type: "json_object" },
+            temperature: 0.3,
+            messages: [
+              { role: "system", content: systemPrompt },
+              { role: "user", content: userPrompt }
+            ]
+          })
+        });
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData?.error?.message || `HTTP ${res.status}`);
+        }
+
+        const data = await res.json();
+        return JSON.parse(data.choices[0].message.content);
+      };
+
+      // Copy text to clipboard helper
+      const copyToClipboard = (text, label) => {
+        navigator.clipboard.writeText(text);
+        showToast(`${label} 복사되었습니다!`, "info");
+      };
+
+      // Save a single card to flashcards
+      const handleSaveSingleCard = (item, type = 'vocab') => {
+        const id = 'card-' + Date.now() + Math.random().toString(36).substr(2, 4);
+        let newCard;
+        if (type === 'casual') {
+          newCard = {
+            id,
+            front: feedbackData.intent_summary || '일상 스몰토크 상황',
+            back: feedbackData.casual_rewriting,
+            example: feedbackData.casual_korean,
+            category: currentTopic.category,
+            memorized: false,
+            createdAt: new Date().toISOString()
+          };
+        } else if (type === 'business') {
+          newCard = {
+            id,
+            front: feedbackData.intent_summary || '비즈니스 / 업무 미팅 상황',
+            back: feedbackData.business_rewriting,
+            example: feedbackData.business_korean,
+            category: currentTopic.category,
+            memorized: false,
+            createdAt: new Date().toISOString()
+          };
+        } else if (type === 'correction') {
+          newCard = {
+            id,
+            front: item.original_phrase + " ➔ " + item.explanation,
+            back: item.native_phrase,
+            example: `대체 표현: ${item.native_phrase}`,
+            category: currentTopic.category,
+            memorized: false,
+            createdAt: new Date().toISOString()
+          };
+        } else {
+          newCard = {
+            id,
+            front: `${item.meaning} (${item.expression})`,
+            back: item.expression,
+            example: item.example,
+            category: currentTopic.category,
+            memorized: false,
+            createdAt: new Date().toISOString()
+          };
+        }
+        onSaveCards([newCard]);
+      };
+
+      // Save all key vocab to flashcards
+      const handleSaveAllVocab = () => {
+        if (!feedbackData?.key_vocab) return;
+        const newCards = feedbackData.key_vocab.map((v, idx) => ({
+          id: 'card-' + Date.now() + '-' + idx,
+          front: `${v.meaning} (상황/의도)`,
+          back: v.expression,
+          example: v.example,
+          category: currentTopic.category,
+          memorized: false,
+          createdAt: new Date().toISOString()
+        }));
+        onSaveCards(newCards);
+      };
+
+      // Format session to Logseq/Obsidian Markdown
+      const exportMarkdownReport = () => {
+        if (!feedbackData) return;
+        const topicStr = isCustomTopic ? customTopicInput : currentTopic.question;
+        const now = new Date();
+        const dateStr = now.toISOString().slice(0, 10);
+        const timeStr = now.toTimeString().slice(0, 5);
+
+        let md = `# 🎙️ 1-Minute English Monologue | ${dateStr}\n\n`;
+        md += `- **📅 일시**: ${dateStr} ${timeStr}\n`;
+        md += `- **🏷️ 카테고리**: ${currentTopic.category}\n`;
+        md += `- **🎯 주제**: ${topicStr}\n`;
+        md += `  - **🗣️ 내 발화 원문**:\n`;
+        md += `    - "${transcript}"\n`;
+        md += `  - **💡 의도 요약**:\n`;
+        md += `    - ${feedbackData.intent_summary}\n`;
+        md += `  - **✨ 원어민 재구성**:\n`;
+        md += `    - **Natural Casual**: ${feedbackData.casual_rewriting}\n`;
+        md += `      - *해석*: ${feedbackData.casual_korean}\n`;
+        md += `    - **Professional Business**: ${feedbackData.business_rewriting}\n`;
+        md += `      - *해석*: ${feedbackData.business_korean}\n`;
+        
+        if (feedbackData.corrections?.length > 0) {
+          md += `  - **🔍 교정 포인트 (Diff)**:\n`;
+          feedbackData.corrections.forEach(c => {
+            md += `    - ~~${c.original_phrase}~~ ➔ **${c.native_phrase}**\n`;
+            md += `      - *코칭*: ${c.explanation}\n`;
+          });
+        }
+
+        if (feedbackData.key_vocab?.length > 0) {
+          md += `  - **📚 핵심 어휘 & 구동사**:\n`;
+          feedbackData.key_vocab.forEach(v => {
+            md += `    - **${v.expression}**: ${v.meaning}\n`;
+            md += `      - *예문*: ${v.example}\n`;
+          });
+        }
+
+        copyToClipboard(md, "마크다운(Markdown) 노트가 클립보드에");
+      };
+
+      return (
+        <div className="space-y-6">
+          {/* STEP 1: TOPIC GENERATOR */}
+          <section className="bg-white dark:bg-slate-900/90 rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200/80 dark:border-slate-800">
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-brand-500 text-white text-xs font-bold flex items-center justify-center">1</span>
+                <h2 className="text-sm md:text-base font-bold text-slate-900 dark:text-white">
+                  오늘의 1분 혼잣말 주제 뽑기
+                </h2>
+              </div>
+
+              {/* Category Pills */}
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 max-w-full">
+                {CATEGORIES.map(cat => (
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setSelectedCategory(cat);
+                      const pool = cat === "전체" ? PRESET_TOPICS : PRESET_TOPICS.filter(t => t.category === cat);
+                      setCurrentTopic(pool[Math.floor(Math.random() * pool.length)]);
+                      setIsCustomTopic(false);
+                    }}
+                    className={`px-2.5 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors ${
+                      selectedCategory === cat
+                        ? 'bg-brand-500 text-white'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Topic Card Display */}
+            <div className="relative rounded-xl p-4 md:p-5 bg-gradient-to-r from-brand-50/80 to-indigo-50/40 dark:from-slate-800/80 dark:to-brand-950/20 border border-brand-200/60 dark:border-brand-900/40">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex-1 space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-600 dark:text-brand-400">
+                      {currentTopic.category}
+                    </span>
+                  </div>
+                  {!isCustomTopic ? (
+                    <>
+                      <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white leading-snug">
+                        "{currentTopic.question}"
+                      </h3>
+                      <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400 italic font-normal">
+                        {currentTopic.subtext}
+                      </p>
+                    </>
+                  ) : (
+                    <div className="w-full pt-1">
+                      <input
+                        type="text"
+                        value={customTopicInput}
+                        onChange={(e) => setCustomTopicInput(e.target.value)}
+                        placeholder="내가 오늘 말하고 싶은 주제나 질문을 직접 입력하세요..."
+                        className="w-full px-3 py-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+                        autoFocus
+                      />
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex items-center gap-2 self-end sm:self-center shrink-0">
+                  <button
+                    onClick={pickRandomTopic}
+                    className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-750 shadow-sm transition-transform active:scale-95"
+                    title="랜덤 다른 주제 뽑기"
+                  >
+                    <Icon name="dice" className="text-brand-500" />
+                    <span>랜덤 뽑기</span>
+                  </button>
+
+                  <button
+                    onClick={() => setIsCustomTopic(!isCustomTopic)}
+                    className="px-3 py-2 rounded-lg text-xs font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  >
+                    {isCustomTopic ? "프리셋 주제로" : "직접 입력"}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* STEP 2: SPEAKING & STT ENGINE */}
+          <section className="bg-white dark:bg-slate-900/90 rounded-2xl p-5 md:p-6 shadow-sm border border-slate-200/80 dark:border-slate-800">
+            <div className="flex items-center justify-between gap-3 mb-4">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-6 rounded-lg bg-brand-500 text-white text-xs font-bold flex items-center justify-center">2</span>
+                <h2 className="text-sm md:text-base font-bold text-slate-900 dark:text-white">
+                  1분 타이머 & 음성 녹음 (STT)
+                </h2>
+              </div>
+
+              {/* STT Status Chip */}
+              <div className="flex items-center gap-2 text-xs">
+                {isRecording ? (
+                  <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 font-semibold animate-pulse">
+                    <span className="w-2 h-2 rounded-full bg-rose-500"></span>
+                    실시간 녹음 중...
+                  </span>
+                ) : (
+                  <span className="text-slate-500 dark:text-slate-400 text-xs">
+                    브라우저 Web Speech API 연동
+                  </span>
+                )}
+              </div>
+            </div>
+
+            {/* Timer & Controls Bar */}
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-5 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800">
+              {/* Circular / Big Timer Display */}
+              <div className="flex items-center gap-4">
+                <div className="relative w-16 h-16 flex items-center justify-center">
+                  <svg className="w-16 h-16 transform -rotate-90">
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="26"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      className="text-slate-200 dark:text-slate-700"
+                      fill="transparent"
+                    />
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="26"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      className={`transition-all duration-300 ${
+                        timeLeft <= 10 ? 'text-rose-500' : timeLeft <= 25 ? 'text-amber-500' : 'text-brand-500'
+                      }`}
+                      fill="transparent"
+                      strokeDasharray={163.36}
+                      strokeDashoffset={163.36 - (163.36 * timeLeft) / 60}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <span className={`absolute text-sm font-bold font-mono ${
+                    timeLeft <= 10 ? 'text-rose-500 animate-pulse' : 'text-slate-800 dark:text-white'
+                  }`}>
+                    {timeLeft}s
+                  </span>
+                </div>
+
+                <div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">권장 발화 시간</div>
+                  <div className="text-sm font-bold text-slate-800 dark:text-white">
+                    60초 집중 스피킹
+                  </div>
+                  <div className="text-[11px] text-slate-400">
+                    부담 없이 편하게 한두 문장씩 말해보세요
+                  </div>
+                </div>
+              </div>
+
+              {/* Audio Wave Visualizer */}
+              <div className="flex items-center gap-1.5 h-10 px-4 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-700/60 shadow-inner">
+                {[...Array(14)].map((_, i) => {
+                  const dynamicHeight = isRecording
+                    ? Math.max(6, Math.min(32, micVolume * (0.4 + (i % 5) * 0.25)))
+                    : 6;
+                  return (
+                    <div
+                      key={i}
+                      className={`w-1 rounded-full transition-all duration-75 ${
+                        isRecording ? 'bg-brand-500' : 'bg-slate-300 dark:bg-slate-700'
+                      }`}
+                      style={{ height: `${dynamicHeight}px` }}
+                    />
+                  );
+                })}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex items-center gap-2">
+                {!isRecording ? (
+                  <button
+                    onClick={startRecording}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-500/20 active:scale-95 transition-all"
+                  >
+                    <Icon name="mic" />
+                    <span>🎙️ 1분 스피킹 시작</span>
+                  </button>
+                ) : (
+                  <button
+                    onClick={stopRecording}
+                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-semibold text-sm shadow-md shadow-rose-500/20 active:scale-95 transition-all"
+                  >
+                    <Icon name="square" />
+                    <span>⏹️ 녹음 완료 및 편집</span>
+                  </button>
+                )}
+
+                <button
+                  onClick={resetSession}
+                  className="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  title="초기화"
+                >
+                  <Icon name="refreshCw" />
+                </button>
+              </div>
+            </div>
+
+            {/* Real-time Subtitle & Transcript Editor (CORE UX) */}
+            <div className="mt-4 space-y-2">
+              <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                <span className="font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <Icon name="sparkles" className="text-brand-500" />
+                  실시간 발화 기록 & 보완 에디터
+                </span>
+                <span>
+                  단어가 안 떠오르면 <b>한국어로 섞어 적어도 AI가 완벽히 이해</b>합니다
+                </span>
+              </div>
+
+              <div className="relative">
+                <textarea
+                  value={transcript}
+                  onChange={(e) => setTranscript(e.target.value)}
+                  placeholder={
+                    isRecording 
+                      ? "말씀하시는 내용이 여기에 실시간으로 기록됩니다. (마이크를 향해 편안하게 영어로 말씀해주세요)..."
+                      : "스피킹을 시작하거나, 직접 말했던 내용을 수정/보완해보세요. 영어로 말하다가 막혀서 한국어로 얼버무린 부분(예: 'I had a meeting and 갑자기 취소됐어요')을 그대로 적어주셔도 AI가 의도를 파악해 원어민식 표현으로 다듬어 드립니다."
+                  }
+                  rows={4}
+                  className="w-full p-4 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-750 text-slate-900 dark:text-slate-100 text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-brand-500/50 resize-y transition-all"
+                />
+
+                {interimText && (
+                  <div className="absolute bottom-3 left-4 right-4 pointer-events-none text-xs text-brand-600 dark:text-brand-400 italic bg-brand-50/90 dark:bg-slate-900/90 p-1.5 rounded border border-brand-200 dark:border-brand-900">
+                    인식 중: {interimText}...
+                  </div>
+                )}
+              </div>
+
+              {/* Submit to AI Feedback Button */}
+              <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                <div className="text-xs text-slate-500 dark:text-slate-400">
+                  글자 수: {transcript.length}자 | 단어 수: {transcript.trim() ? transcript.trim().split(/\s+/).length : 0}개
+                </div>
+
+                <button
+                  onClick={requestAIFeedback}
+                  disabled={isLoadingAI || !transcript.trim()}
+                  className={`flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-md ${
+                    isLoadingAI || !transcript.trim()
+                      ? 'bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-600 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white shadow-brand-500/20 active:scale-95'
+                  }`}
+                >
+                  <Icon name="sparkles" className={isLoadingAI ? "animate-spin" : ""} />
+                  <span>{isLoadingAI ? "AI 3단계 심층 첨삭 분석 중..." : "✨ AI 3단계 심층 첨삭 받기"}</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          {/* STEP 3: AI 3-STEP FEEDBACK REPORT CARDS */}
+          {feedbackData && (
+            <section className="space-y-4 animate-fadeIn">
+              {/* Top Banner with Action Buttons */}
+              <div className="flex flex-wrap items-center justify-between gap-3 p-4 rounded-xl bg-brand-50 dark:bg-brand-950/40 border border-brand-200/80 dark:border-brand-900/60">
+                <div className="flex items-center gap-2 text-brand-700 dark:text-brand-300 font-bold text-sm">
+                  <Icon name="sparkles" />
+                  <span>AI 첨삭 리포트가 완성되었습니다!</span>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={handleSaveAllVocab}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-sm transition-colors"
+                  >
+                    <Icon name="plus" />
+                    <span>전체 단어장 자동 저장</span>
+                  </button>
+
+                  <button
+                    onClick={exportMarkdownReport}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-medium hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+                    title="Logseq / Obsidian / Notion 포맷으로 복사"
+                  >
+                    <Icon name="copy" />
+                    <span>마크다운 복사</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* CARD 1: INTENT SUMMARY */}
+              <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+                <div className="flex items-center gap-2 text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-wider mb-2">
+                  <span>💡 STEP 1</span>
+                  <span>내가 말하려던 핵심 의도 요약</span>
+                </div>
+                <p className="text-sm md:text-base text-slate-800 dark:text-slate-200 font-medium leading-relaxed bg-slate-50 dark:bg-slate-800/40 p-3.5 rounded-xl border border-slate-100 dark:border-slate-800">
+                  {feedbackData.intent_summary}
+                </p>
+              </div>
+
+              {/* CARD 2: NATIVE REWRITING (CASUAL & BUSINESS) */}
+              <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+                <div className="flex items-center gap-2 text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
+                  <span>🗣️ STEP 2</span>
+                  <span>수준별 원어민 표현 재구성</span>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Natural Casual */}
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-emerald-50/50 to-teal-50/20 dark:from-emerald-950/20 dark:to-slate-850 border border-emerald-200/60 dark:border-emerald-900/40 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">
+                        Natural Casual (동료 스몰토크용)
+                      </span>
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => playTTS(feedbackData.casual_rewriting)}
+                          className="p-1.5 rounded-lg text-emerald-700 dark:text-emerald-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors"
+                          title="원어민 발음 듣기"
+                        >
+                          <Icon name="volume2" />
+                        </button>
+                        <button
+                          onClick={() => copyToClipboard(feedbackData.casual_rewriting, "Casual 문장이")}
+                          className="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
+                          title="문장 복사"
+                        >
+                          <Icon name="copy" />
+                        </button>
+                        <button
+                          onClick={() => handleSaveSingleCard(null, 'casual')}
+                          className="p-1.5 rounded-lg text-emerald-600 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 transition-colors"
+                          title="단어장에 추가"
+                        >
+                          <Icon name="plus" />
+                        </button>
+                      </div>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
+                      "{feedbackData.casual_rewriting}"
+                    </p>
+                    <p className="text-xs text-slate-600 dark:text-slate-400">
+                      {feedbackData.casual_korean}
+                    </p>
+                  </div>
+
+                  {/* Professional Business */}
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-blue-50/50 to-indigo-50/20 dark:from-blue-950/20 dark:to-slate-850 border border-blue-200/60 dark:border-blue-900/40 space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300">
+                        Professional Business (미팅 & OPIc AL)
+                      </span>
+                      <div className="flex items-center gap-1">
+                        <button
+                          onClick={() => playTTS(feedbackData.business_rewriting)}
+                          className="p-1.5 rounded-lg text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors"
+                          title="원어민 발음 듣기"
+                        >
+                          <Icon name="volume2" />
+                        </button>
+                        <button
+                          onClick={() => copyToClipboard(feedbackData.business_rewriting, "Business 문장이")}
+                          className="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
+                          title="문장 복사"
+                        >
+                          <Icon name="copy" />
+                        </button>
+                        <button
+                          onClick={() => handleSaveSingleCard(null, 'business')}
+                          className="p-1.5 rounded-lg text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
+                          title="단어장에 추가"
+                        >
+                          <Icon name="plus" />
+                        </button>
+                      </div>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-900 dark:text-white leading-relaxed">
+                      "{feedbackData.business_rewriting}"
+                    </p>
+                    <p className="text-xs text-slate-600 dark:text-slate-400">
+                      {feedbackData.business_korean}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CARD 3: KEY CORRECTIONS & DIFF HIGHLIGHTING */}
+              <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
+                  <span>🔍 STEP 3</span>
+                  <span>교정 포인트 & 인라인 Diff 비교</span>
+                </div>
+
+                <div className="space-y-3">
+                  {feedbackData.corrections?.map((c, idx) => (
+                    <div key={idx} className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800 space-y-2">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        {/* Inline Diff Badges */}
+                        <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm">
+                          <span className="line-through px-2 py-0.5 rounded bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 font-medium">
+                            {c.original_phrase}
+                          </span>
+                          <span className="text-slate-400 font-bold">➔</span>
+                          <span className="px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold flex items-center gap-1">
+                            {c.native_phrase}
+                            <button
+                              onClick={() => playTTS(c.native_phrase)}
+                              className="text-emerald-600 hover:text-emerald-800 ml-1"
+                              title="발음 듣기"
+                            >
+                              <Icon name="volume2" />
+                            </button>
+                          </span>
+                        </div>
+
+                        <button
+                          onClick={() => handleSaveSingleCard(c, 'correction')}
+                          className="flex items-center gap-1 text-xs text-brand-600 dark:text-brand-400 hover:underline"
+                        >
+                          <Icon name="plus" />
+                          <span>단어장 저장</span>
+                        </button>
+                      </div>
+
+                      {/* Coaching Comment */}
+                      <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed pl-2 border-l-2 border-amber-400 dark:border-amber-500">
+                        <b>원포인트 코칭:</b> {c.explanation}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* CARD 4: KEY VOCABULARY & IDIOMS */}
+              <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2 text-xs font-bold text-brand-600 dark:text-brand-400 uppercase tracking-wider">
+                    <span>📚 꼭 써먹어야 할 핵심 구동사 & 표현</span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  {feedbackData.key_vocab?.map((v, idx) => (
+                    <div key={idx} className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-850 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+                      <div>
+                        <div className="flex items-center justify-between gap-1 mb-1">
+                          <span className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1">
+                            {v.expression}
+                            <button
+                              onClick={() => playTTS(v.expression)}
+                              className="text-slate-400 hover:text-brand-500"
+                            >
+                              <Icon name="volume2" />
+                            </button>
+                          </span>
+                        </div>
+                        <div className="text-xs text-brand-600 dark:text-brand-400 font-medium mb-1">
+                          {v.meaning}
+                        </div>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400 italic">
+                          "{v.example}"
+                        </p>
+                      </div>
+
+                      <button
+                        onClick={() => handleSaveSingleCard(v, 'vocab')}
+                        className="mt-2 w-full py-1 rounded-lg bg-slate-200/60 dark:bg-slate-800 text-[11px] font-semibold text-slate-700 dark:text-slate-300 hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-brand-900/40 dark:hover:text-brand-300 flex items-center justify-center gap-1 transition-colors"
+                      >
+                        <Icon name="plus" />
+                        <span>플래시카드 추가</span>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+        </div>
+      );
+    }
+
+    // --- TAB 2: FLASHCARDS & INTERACTIVE QUIZ MODE ---
+    function FlashcardsTab({ flashcards, setFlashcards, showToast }) {
+      // View Mode: 'flip' | 'quiz' | 'list'
+      const [viewMode, setViewMode] = useState('flip');
+      
+      // Filter: 'all' | 'need_review' | 'memorized'
+      const [filter, setFilter] = useState('all');
+
+      // Card Flip State
+      const [currentIndex, setCurrentIndex] = useState(0);
+      const [isFlipped, setIsFlipped] = useState(false);
+
+      // Quiz Mode State
+      const [userQuizAnswer, setUserQuizAnswer] = useState("");
+      const [quizSubmitted, setQuizSubmitted] = useState(false);
+      const [quizIsCorrect, setQuizIsCorrect] = useState(null);
+      const [showHint, setShowHint] = useState(false);
+
+      // Filtered Card List
+      const filteredCards = useMemo(() => {
+        if (filter === 'need_review') return flashcards.filter(c => !c.memorized);
+        if (filter === 'memorized') return flashcards.filter(c => c.memorized);
+        return flashcards;
+      }, [flashcards, filter]);
+
+      const currentCard = filteredCards[currentIndex];
+
+      // Next / Prev Card Handlers
+      const handleNext = () => {
+        setIsFlipped(false);
+        setUserQuizAnswer("");
+        setQuizSubmitted(false);
+        setQuizIsCorrect(null);
+        setShowHint(false);
+        if (currentIndex < filteredCards.length - 1) {
+          setCurrentIndex(i => i + 1);
+        } else {
+          setCurrentIndex(0);
+        }
+      };
+
+      const handlePrev = () => {
+        setIsFlipped(false);
+        setUserQuizAnswer("");
+        setQuizSubmitted(false);
+        setQuizIsCorrect(null);
+        setShowHint(false);
+        if (currentIndex > 0) {
+          setCurrentIndex(i => i - 1);
+        } else {
+          setCurrentIndex(filteredCards.length - 1);
+        }
+      };
+
+      // Toggle Memorized Status
+      const toggleMemorized = (cardId) => {
+        setFlashcards(prev => prev.map(c => {
+          if (c.id === cardId) {
+            const nextVal = !c.memorized;
+            showToast(nextVal ? "외운 단어로 분류되었습니다! 🎉" : "다시 볼 단어로 변경되었습니다.", "info");
+            return { ...c, memorized: nextVal };
+          }
+          return c;
+        }));
+      };
+
+      // Delete Card
+      const deleteCard = (cardId) => {
+        if (!confirm("이 카드를 단어장에서 삭제할까요?")) return;
+        setFlashcards(prev => prev.filter(c => c.id !== cardId));
+        showToast("카드가 삭제되었습니다.", "info");
+      };
+
+      // Quiz Answer Verification
+      const handleQuizSubmit = (e) => {
+        e?.preventDefault();
+        if (!currentCard || !userQuizAnswer.trim()) return;
+
+        const cleanUser = userQuizAnswer.trim().toLowerCase().replace(/[.,!?'"~]/g, '');
+        const cleanTarget = currentCard.back.trim().toLowerCase().replace(/[.,!?'"~]/g, '');
+
+        // Simple fuzzy match
+        const isMatch = cleanUser === cleanTarget || cleanTarget.includes(cleanUser) || cleanUser.includes(cleanTarget);
+        setQuizIsCorrect(isMatch);
+        setQuizSubmitted(true);
+
+        if (isMatch) {
+          showToast("정답입니다! 완벽해요! 👏", "success");
+          // auto mark memorized
+          setFlashcards(prev => prev.map(c => c.id === currentCard.id ? { ...c, memorized: true } : c));
+        }
+      };
+
+      return (
+        <div className="space-y-6">
+          {/* Top Control Bar */}
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-4 md:p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm flex flex-wrap items-center justify-between gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-bold text-slate-500 dark:text-slate-400">단어 통계:</span>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                총 {flashcards.length}개
+              </span>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-400">
+                외웠어요 {flashcards.filter(c => c.memorized).length}
+              </span>
+              <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-400">
+                복습 필요 {flashcards.filter(c => !c.memorized).length}
+              </span>
+            </div>
+
+            {/* Mode & Filter Tabs */}
+            <div className="flex flex-wrap items-center gap-2">
+              {/* Filter */}
+              <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs">
+                <button
+                  onClick={() => { setFilter('all'); setCurrentIndex(0); }}
+                  className={`px-2.5 py-1 rounded-md transition-colors ${filter === 'all' ? 'bg-white dark:bg-slate-700 font-semibold shadow-sm' : 'text-slate-500'}`}
+                >
+                  전체
+                </button>
+                <button
+                  onClick={() => { setFilter('need_review'); setCurrentIndex(0); }}
+                  className={`px-2.5 py-1 rounded-md transition-colors ${filter === 'need_review' ? 'bg-white dark:bg-slate-700 font-semibold shadow-sm text-amber-600' : 'text-slate-500'}`}
+                >
+                  다시보기
+                </button>
+                <button
+                  onClick={() => { setFilter('memorized'); setCurrentIndex(0); }}
+                  className={`px-2.5 py-1 rounded-md transition-colors ${filter === 'memorized' ? 'bg-white dark:bg-slate-700 font-semibold shadow-sm text-emerald-600' : 'text-slate-500'}`}
+                >
+                  외운 표현
+                </button>
+              </div>
+
+              {/* View Mode Toggle */}
+              <div className="inline-flex p-1 bg-slate-100 dark:bg-slate-800 rounded-lg text-xs font-semibold">
+                <button
+                  onClick={() => setViewMode('flip')}
+                  className={`px-3 py-1 rounded-md transition-all ${viewMode === 'flip' ? 'bg-brand-500 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400'}`}
+                >
+                  🃏 3D 플립 카드
+                </button>
+                <button
+                  onClick={() => setViewMode('quiz')}
+                  className={`px-3 py-1 rounded-md transition-all ${viewMode === 'quiz' ? 'bg-brand-500 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400'}`}
+                >
+                  ✍️ 영작 퀴즈
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`px-3 py-1 rounded-md transition-all ${viewMode === 'list' ? 'bg-brand-500 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400'}`}
+                >
+                  📋 목록 뷰
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* EMPTY STATE */}
+          {filteredCards.length === 0 && (
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-12 text-center border border-slate-200/80 dark:border-slate-800 space-y-3">
+              <div className="w-12 h-12 mx-auto rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+                <Icon name="bookOpen" />
+              </div>
+              <h3 className="text-base font-bold text-slate-800 dark:text-white">
+                저장된 카드가 없습니다
+              </h3>
+              <p className="text-xs text-slate-500 max-w-sm mx-auto">
+                스피킹 세션을 완료한 후 AI 첨삭 리포트에서 <b>[+ 단어장 저장]</b> 버튼을 눌러 나만의 표현을 모아보세요.
+              </p>
+            </div>
+          )}
+
+          {/* MODE 1: 3D FLIP CARD */}
+          {filteredCards.length > 0 && viewMode === 'flip' && currentCard && (
+            <div className="space-y-4 max-w-xl mx-auto">
+              <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 px-1">
+                <span>카드 {currentIndex + 1} / {filteredCards.length}</span>
+                <span>카드를 클릭하면 앞/뒤가 뒤집힙니다</span>
+              </div>
+
+              {/* 3D Perspective Container */}
+              <div
+                onClick={() => setIsFlipped(!isFlipped)}
+                className="perspective-1000 w-full h-72 cursor-pointer select-none"
+              >
+                <div className={`relative w-full h-full rounded-2xl transition-transform duration-500 transform-style-preserve-3d shadow-lg border border-slate-200/80 dark:border-slate-800 ${
+                  isFlipped ? 'rotate-y-180' : ''
+                }`}>
+                  {/* FRONT: Korean Intent & Situation */}
+                  <div className="absolute inset-0 w-full h-full rounded-2xl p-6 bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-850 flex flex-col justify-between backface-hidden">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 dark:bg-brand-950/60 dark:text-brand-300">
+                        {currentCard.category || "직장인 영어"}
+                      </span>
+                      <span className="text-xs text-slate-400 font-medium">앞면 (한국어 의도)</span>
+                    </div>
+
+                    <div className="text-center my-auto space-y-2">
+                      <p className="text-xs text-brand-600 dark:text-brand-400 font-medium">이 말을 영어로 어떻게 할까요?</p>
+                      <h3 className="text-base md:text-xl font-bold text-slate-900 dark:text-white leading-relaxed">
+                        "{currentCard.front}"
+                      </h3>
+                    </div>
+
+                    <div className="text-center text-xs text-slate-400">
+                      클릭해서 영어 표현 확인하기 👆
+                    </div>
+                  </div>
+
+                  {/* BACK: English Expression & Example */}
+                  <div className="absolute inset-0 w-full h-full rounded-2xl p-6 bg-gradient-to-br from-indigo-50/80 to-brand-50/40 dark:from-slate-900 dark:to-indigo-950/30 flex flex-col justify-between backface-hidden rotate-y-180 border-2 border-brand-500/30">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-500 text-white">
+                        원어민 영어 표현
+                      </span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          playTTS(currentCard.back);
+                        }}
+                        className="flex items-center gap-1 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline"
+                        title="발음 듣기"
+                      >
+                        <Icon name="volume2" />
+                        <span>발음 듣기</span>
+                      </button>
+                    </div>
+
+                    <div className="text-center my-auto space-y-3">
+                      <h3 className="text-lg md:text-2xl font-bold text-brand-600 dark:text-brand-400 tracking-tight">
+                        "{currentCard.back}"
+                      </h3>
+                      {currentCard.example && (
+                        <p className="text-xs md:text-sm text-slate-600 dark:text-slate-300 italic bg-white/60 dark:bg-slate-800/60 p-2.5 rounded-xl border border-brand-200/50 dark:border-brand-900/40">
+                          {currentCard.example}
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="text-center text-xs text-slate-400">
+                      다시 클릭하면 앞면으로 뒤집힙니다
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Actions: Status Toggle & Next/Prev */}
+              <div className="flex items-center justify-between gap-3 pt-2">
+                <button
+                  onClick={handlePrev}
+                  className="flex items-center gap-1 px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 transition-colors"
+                >
+                  <Icon name="chevronLeft" />
+                  <span>이전</span>
+                </button>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => toggleMemorized(currentCard.id)}
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+                      currentCard.memorized
+                        ? 'bg-emerald-500 text-white shadow-md shadow-emerald-500/20'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200'
+                    }`}
+                  >
+                    <Icon name="check" />
+                    <span>{currentCard.memorized ? "외웠어요! ✅" : "다 외웠나요?"}</span>
+                  </button>
+
+                  <button
+                    onClick={() => deleteCard(currentCard.id)}
+                    className="p-2 rounded-xl text-slate-400 hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/40 transition-colors"
+                    title="카드 삭제"
+                  >
+                    <Icon name="trash" />
+                  </button>
+                </div>
+
+                <button
+                  onClick={handleNext}
+                  className="flex items-center gap-1 px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 transition-colors"
+                >
+                  <span>다음</span>
+                  <Icon name="chevronRight" />
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* MODE 2: INTERACTIVE QUIZ MODE */}
+          {filteredCards.length > 0 && viewMode === 'quiz' && currentCard && (
+            <div className="max-w-xl mx-auto bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-5">
+              <div className="flex items-center justify-between text-xs text-slate-500">
+                <span className="font-semibold text-brand-600 dark:text-brand-400">
+                  ✍️ 영작 / 빈칸 퀴즈 ({currentIndex + 1}/{filteredCards.length})
+                </span>
+                <button
+                  onClick={() => setShowHint(!showHint)}
+                  className="flex items-center gap-1 text-amber-600 hover:underline"
+                >
+                  <Icon name="helpCircle" />
+                  <span>{showHint ? "힌트 숨기기" : "힌트 보기"}</span>
+                </button>
+              </div>
+
+              {/* Quiz Prompt */}
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200/60 dark:border-slate-800 space-y-2 text-center">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                  다음 한국어 상황에 맞는 원어민 표현을 입력하세요
+                </span>
+                <h3 className="text-base md:text-lg font-bold text-slate-900 dark:text-white">
+                  "{currentCard.front}"
+                </h3>
+
+                {showHint && (
+                  <div className="text-xs font-mono text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 p-2 rounded-lg mt-2">
+                    💡 힌트: {currentCard.back.split(' ').map(w => w[0] + '_'.repeat(Math.max(1, w.length - 1))).join(' ')}
+                  </div>
+                )}
+              </div>
+
+              {/* Quiz Input Form */}
+              <form onSubmit={handleQuizSubmit} className="space-y-3">
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={userQuizAnswer}
+                    onChange={(e) => setUserQuizAnswer(e.target.value)}
+                    placeholder="원어민 영어 표현을 직접 타이핑해보세요..."
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"
+                    autoFocus
+                  />
+                  {quizSubmitted && (
+                    <div className="absolute right-3 top-3">
+                      {quizIsCorrect ? (
+                        <span className="text-emerald-500 font-bold text-sm">✅ 정답!</span>
+                      ) : (
+                        <span className="text-rose-500 font-bold text-sm">❌ 아쉬워요</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Submitted Evaluation Card */}
+                {quizSubmitted && (
+                  <div className={`p-4 rounded-xl text-xs space-y-2 border ${
+                    quizIsCorrect 
+                      ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200'
+                      : 'bg-rose-50 dark:bg-rose-950/40 border-rose-200 dark:border-rose-800 text-rose-900 dark:text-rose-200'
+                  }`}>
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold">
+                        {quizIsCorrect ? "축하합니다! 완벽히 일치합니다." : "정답 표현을 확인하고 소리 내어 읽어보세요:"}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => playTTS(currentCard.back)}
+                        className="flex items-center gap-1 font-semibold hover:underline"
+                      >
+                        <Icon name="volume2" />
+                        <span>발음 듣기</span>
+                      </button>
+                    </div>
+
+                    <div className="text-sm font-bold font-mono">
+                      정답: "{currentCard.back}"
+                    </div>
+                    {currentCard.example && (
+                      <div className="text-[11px] opacity-90 italic">
+                        예문: {currentCard.example}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                <div className="flex items-center justify-between gap-3 pt-2">
+                  <button
+                    type="button"
+                    onClick={handlePrev}
+                    className="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-600 dark:text-slate-300"
+                  >
+                    이전 문제
+                  </button>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="submit"
+                      className="px-5 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs shadow-md shadow-brand-500/20"
+                    >
+                      정답 확인
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={handleNext}
+                      className="px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-xs"
+                    >
+                      다음 문제 ➔
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          )}
+
+          {/* MODE 3: TABLE / LIST VIEW */}
+          {filteredCards.length > 0 && viewMode === 'list' && (
+            <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-xs">
+                  <thead className="bg-slate-50 dark:bg-slate-800/60 text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800">
+                    <tr>
+                      <th className="py-3 px-4 font-semibold">상태</th>
+                      <th className="py-3 px-4 font-semibold">한국어 의도 / 상황</th>
+                      <th className="py-3 px-4 font-semibold">원어민 영어 표현</th>
+                      <th className="py-3 px-4 font-semibold">예문</th>
+                      <th className="py-3 px-4 font-semibold text-right">동작</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                    {filteredCards.map(c => (
+                      <tr key={c.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
+                        <td className="py-3 px-4">
+                          <button
+                            onClick={() => toggleMemorized(c.id)}
+                            className={`p-1.5 rounded-lg text-xs font-bold ${
+                              c.memorized ? 'text-emerald-500 bg-emerald-50 dark:bg-emerald-950/40' : 'text-slate-400 bg-slate-100 dark:bg-slate-800'
+                            }`}
+                          >
+                            <Icon name="check" />
+                          </button>
+                        </td>
+                        <td className="py-3 px-4 font-medium text-slate-800 dark:text-slate-200 max-w-xs">
+                          {c.front}
+                        </td>
+                        <td className="py-3 px-4 font-bold text-brand-600 dark:text-brand-400 max-w-xs">
+                          <div className="flex items-center gap-1.5">
+                            <span>{c.back}</span>
+                            <button
+                              onClick={() => playTTS(c.back)}
+                              className="text-slate-400 hover:text-brand-500"
+                              title="발음 듣기"
+                            >
+                              <Icon name="volume2" />
+                            </button>
+                          </div>
+                        </td>
+                        <td className="py-3 px-4 text-slate-500 dark:text-slate-400 italic max-w-sm">
+                          {c.example || "-"}
+                        </td>
+                        <td className="py-3 px-4 text-right">
+                          <button
+                            onClick={() => deleteCard(c.id)}
+                            className="p-1.5 text-slate-400 hover:text-rose-500 transition-colors"
+                            title="삭제"
+                          >
+                            <Icon name="trash" />
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    // --- TAB 3: HISTORY & STREAK DASHBOARD ---
+    function HistoryTab({ history, setHistory, flashcards, streakData, setStreakData, showToast }) {
+      const [expandedSessionId, setExpandedSessionId] = useState(null);
+      const fileInputRef = useRef(null);
+
+      // Total speaking minutes estimate (each session ~ 1 min)
+      const totalMinutes = history.length;
+      const totalWordsSaved = flashcards.length;
+
+      // Copy Single Session to Markdown
+      const copySessionMarkdown = (session) => {
+        let md = `# 🎙️ 1-Minute English Monologue | ${session.date.slice(0, 10)}\n\n`;
+        md += `- **🎯 주제**: ${session.topic}\n`;
+        md += `- **🗣️ 내 원문**: "${session.rawText}"\n`;
+        if (session.feedback) {
+          md += `- **💡 의도 요약**: ${session.feedback.intent_summary}\n`;
+          md += `- **Natural Casual**: ${session.feedback.casual_rewriting}\n`;
+          md += `- **Professional Business**: ${session.feedback.business_rewriting}\n`;
+        }
+        navigator.clipboard.writeText(md);
+        showToast("마크다운이 클립보드에 복사되었습니다!", "info");
+      };
+
+      // Download Single Session as .md File
+      const downloadSessionMarkdown = (session) => {
+        let md = `# 🎙️ 1-Minute English Monologue | ${session.date.slice(0, 10)}\n\n`;
+        md += `- **🎯 주제**: ${session.topic}\n`;
+        md += `- **🗣️ 내 원문**: "${session.rawText}"\n`;
+        if (session.feedback) {
+          md += `- **💡 의도 요약**: ${session.feedback.intent_summary}\n`;
+          md += `- **Natural Casual**: ${session.feedback.casual_rewriting}\n`;
+          md += `- **Professional Business**: ${session.feedback.business_rewriting}\n`;
+        }
+        const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `monologue-${session.date.slice(0, 10)}.md`;
+        a.click();
+        URL.revokeObjectURL(url);
+      };
+
+      // Export Full JSON Backup
+      const handleExportJSON = () => {
+        const fullBackup = {
+          version: '1.0',
+          exportedAt: new Date().toISOString(),
+          streakData,
+          history,
+          flashcards
+        };
+        const blob = new Blob([JSON.stringify(fullBackup, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `1-minute-monologue-backup-${new Date().toISOString().slice(0, 10)}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast("데이터 백업 파일이 다운로드되었습니다.", "success");
+      };
+
+      // Import JSON Backup
+      const handleImportJSON = (e) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const data = JSON.parse(event.target.result);
+            if (data.history) setHistory(data.history);
+            if (data.flashcards) Storage.set('monologue_flashcards', data.flashcards);
+            if (data.streakData) setStreakData(data.streakData);
+            showToast("백업 데이터가 성공적으로 복원되었습니다!", "success");
+            setTimeout(() => window.location.reload(), 1000);
+          } catch (err) {
+            alert("유효한 백업 JSON 파일이 아닙니다.");
+          }
+        };
+        reader.readAsText(file);
+      };
+
+      // Delete a session
+      const deleteSession = (id) => {
+        if (!confirm("이 세션 기록을 삭제할까요?")) return;
+        setHistory(prev => prev.filter(s => s.id !== id));
+        showToast("세션 기록이 삭제되었습니다.", "info");
+      };
+
+      const daysOfWeek = ["월", "화", "수", "목", "금", "토", "일"];
+
+      return (
+        <div className="space-y-6">
+          {/* STATS OVERVIEW CARDS */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-500 flex items-center justify-center">
+                <Icon name="flame" />
+              </div>
+              <div>
+                <div className="text-xs text-slate-500">연속 학습 스트릭</div>
+                <div className="text-lg font-bold text-slate-900 dark:text-white">
+                  {streakData.count}일 연속
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-950/60 text-brand-500 flex items-center justify-center">
+                <Icon name="mic" />
+              </div>
+              <div>
+                <div className="text-xs text-slate-500">총 스피킹 세션</div>
+                <div className="text-lg font-bold text-slate-900 dark:text-white">
+                  {history.length}회 완료
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-500 flex items-center justify-center">
+                <Icon name="bookOpen" />
+              </div>
+              <div>
+                <div className="text-xs text-slate-500">축적된 플래시카드</div>
+                <div className="text-lg font-bold text-slate-900 dark:text-white">
+                  {totalWordsSaved}개 어휘
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-slate-200/80 dark:border-slate-800 shadow-sm flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-950/60 text-blue-500 flex items-center justify-center">
+                <Icon name="award" />
+              </div>
+              <div>
+                <div className="text-xs text-slate-500">누적 발화 시간</div>
+                <div className="text-lg font-bold text-slate-900 dark:text-white">
+                  약 {totalMinutes}분
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* WEEKLY ACTIVITY GRASS (잔디) */}
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <span>🌱 이번 주 스피킹 출석 잔디</span>
+              </h3>
+              <span className="text-xs text-slate-400">매일 1분씩 꾸준함이 기적을 만듭니다</span>
+            </div>
+
+            <div className="grid grid-cols-7 gap-2 pt-2">
+              {daysOfWeek.map((dayName, idx) => {
+                const isActive = (streakData.activeDays || []).includes(idx);
+                return (
+                  <div
+                    key={idx}
+                    className={`flex flex-col items-center justify-center p-3 rounded-xl border transition-all ${
+                      isActive
+                        ? 'bg-emerald-500 text-white border-emerald-600 shadow-sm shadow-emerald-500/20'
+                        : 'bg-slate-50 dark:bg-slate-800/40 text-slate-400 border-slate-200 dark:border-slate-800'
+                    }`}
+                  >
+                    <span className="text-xs font-semibold">{dayName}</span>
+                    <span className="mt-1 text-xs">
+                      {isActive ? '🔥 1분' : '—'}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* SESSION HISTORY LIST */}
+          <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <Icon name="calendar" />
+                <span>일자별 스피킹 세션 히스토리</span>
+                <span className="text-xs font-normal text-slate-400">({history.length}건)</span>
+              </h3>
+
+              {/* Data Backup & Restore Action Buttons */}
+              <div className="flex items-center gap-2">
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  onChange={handleImportJSON}
+                  accept=".json"
+                  className="hidden"
+                />
+
+                <button
+                  onClick={() => fileInputRef.current?.click()}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  title="백업 JSON 파일 복원"
+                >
+                  <Icon name="upload" />
+                  <span>데이터 복원</span>
+                </button>
+
+                <button
+                  onClick={handleExportJSON}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-medium text-slate-700 dark:text-slate-200 transition-colors"
+                  title="전체 데이터 JSON 다운로드"
+                >
+                  <Icon name="download" />
+                  <span>백업 다운로드</span>
+                </button>
+              </div>
+            </div>
+
+            {history.length === 0 ? (
+              <div className="py-12 text-center text-xs text-slate-400">
+                아직 완료된 스피킹 기록이 없습니다. 오늘 첫 번째 1분 혼잣말을 시작해보세요!
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {history.map(session => {
+                  const isExpanded = expandedSessionId === session.id;
+                  const dateDisplay = new Date(session.date).toLocaleString('ko-KR', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                  });
+
+                  return (
+                    <div
+                      key={session.id}
+                      className="rounded-xl border border-slate-200/80 dark:border-slate-800 overflow-hidden bg-slate-50/50 dark:bg-slate-850/50 transition-all"
+                    >
+                      {/* Accordion Header */}
+                      <div
+                        onClick={() => setExpandedSessionId(isExpanded ? null : session.id)}
+                        className="p-4 flex items-center justify-between gap-3 cursor-pointer hover:bg-slate-100/50 dark:hover:bg-slate-800/40 select-none"
+                      >
+                        <div className="space-y-1 flex-1">
+                          <div className="flex items-center gap-2">
+                            <span className="text-[11px] font-semibold text-brand-600 dark:text-brand-400">
+                              {session.category || "일반"}
+                            </span>
+                            <span className="text-xs text-slate-400">•</span>
+                            <span className="text-xs text-slate-400">{dateDisplay}</span>
+                          </div>
+                          <h4 className="text-sm font-bold text-slate-800 dark:text-white">
+                            "{session.topic}"
+                          </h4>
+                        </div>
+
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              copySessionMarkdown(session);
+                            }}
+                            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700"
+                            title="마크다운 복사"
+                          >
+                            <Icon name="copy" />
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              downloadSessionMarkdown(session);
+                            }}
+                            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700"
+                            title=".md 파일 다운로드"
+                          >
+                            <Icon name="download" />
+                          </button>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              deleteSession(session.id);
+                            }}
+                            className="p-1.5 rounded-lg text-slate-400 hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-950/40"
+                            title="삭제"
+                          >
+                            <Icon name="trash" />
+                          </button>
+                          <span className="text-xs font-bold text-slate-400">
+                            {isExpanded ? '▲' : '▼'}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Accordion Expanded Body */}
+                      {isExpanded && (
+                        <div className="p-4 pt-2 border-t border-slate-200/60 dark:border-slate-800 space-y-3 bg-white dark:bg-slate-900 text-xs">
+                          {/* Raw Speech */}
+                          <div>
+                            <span className="font-bold text-slate-500">내 발화 원문:</span>
+                            <p className="mt-1 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-mono">
+                              "{session.rawText}"
+                            </p>
+                          </div>
+
+                          {session.feedback && (
+                            <>
+                              {/* Rewritings */}
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
+                                <div className="p-3 rounded-lg bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/50 dark:border-emerald-900/30">
+                                  <div className="flex items-center justify-between font-bold text-emerald-800 dark:text-emerald-300 mb-1">
+                                    <span>Natural Casual</span>
+                                    <button onClick={() => playTTS(session.feedback.casual_rewriting)}>
+                                      <Icon name="volume2" />
+                                    </button>
+                                  </div>
+                                  <p className="font-semibold text-slate-900 dark:text-white">
+                                    "{session.feedback.casual_rewriting}"
+                                  </p>
+                                  <p className="text-slate-500 dark:text-slate-400 mt-1">
+                                    {session.feedback.casual_korean}
+                                  </p>
+                                </div>
+
+                                <div className="p-3 rounded-lg bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/50 dark:border-blue-900/30">
+                                  <div className="flex items-center justify-between font-bold text-blue-800 dark:text-blue-300 mb-1">
+                                    <span>Professional Business</span>
+                                    <button onClick={() => playTTS(session.feedback.business_rewriting)}>
+                                      <Icon name="volume2" />
+                                    </button>
+                                  </div>
+                                  <p className="font-semibold text-slate-900 dark:text-white">
+                                    "{session.feedback.business_rewriting}"
+                                  </p>
+                                  <p className="text-slate-500 dark:text-slate-400 mt-1">
+                                    {session.feedback.business_korean}
+                                  </p>
+                                </div>
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    // --- SETTINGS MODAL COMPONENT ---
+    function SettingsModal({ settings, onSave, onClose }) {
+      const [provider, setProvider] = useState(settings.provider);
+      const [geminiKey, setGeminiKey] = useState(settings.geminiKey || '');
+      const [openaiKey, setOpenaiKey] = useState(settings.openaiKey || '');
+      const [showKey, setShowKey] = useState(false);
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        onSave({
+          ...settings,
+          provider,
+          geminiKey: geminiKey.trim(),
+          openaiKey: openaiKey.trim()
+        });
+      };
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
+          <div className="w-full max-w-md bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-2xl space-y-5">
+            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+              <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <Icon name="settings" />
+                <span>AI 첨삭 엔진 & API Key 설정</span>
+              </h3>
+              <button onClick={onClose} className="text-slate-400 hover:text-slate-600 text-sm font-bold">
+                ✕
+              </button>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-4 text-xs">
+              {/* Provider Selection */}
+              <div className="space-y-2">
+                <label className="font-semibold text-slate-700 dark:text-slate-300">
+                  AI Provider 선택
+                </label>
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setProvider('gemini')}
+                    className={`p-2.5 rounded-xl border text-center transition-all ${
+                      provider === 'gemini'
+                        ? 'border-brand-500 bg-brand-50/50 dark:bg-brand-950/40 text-brand-600 font-bold'
+                        : 'border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400'
+                    }`}
+                  >
+                    Google Gemini
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setProvider('openai')}
+                    className={`p-2.5 rounded-xl border text-center transition-all ${
+                      provider === 'openai'
+                        ? 'border-brand-500 bg-brand-50/50 dark:bg-brand-950/40 text-brand-600 font-bold'
+                        : 'border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400'
+                    }`}
+                  >
+                    OpenAI GPT
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setProvider('demo')}
+                    className={`p-2.5 rounded-xl border text-center transition-all ${
+                      provider === 'demo'
+                        ? 'border-amber-500 bg-amber-50/50 dark:bg-amber-950/40 text-amber-600 font-bold'
+                        : 'border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-400'
+                    }`}
+                  >
+                    데모 모드 (키 없음)
+                  </button>
+                </div>
+              </div>
+
+              {/* Gemini Key Input */}
+              {provider === 'gemini' && (
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <label className="font-semibold text-slate-700 dark:text-slate-300">
+                      Google Gemini API Key
+                    </label>
+                    <a
+                      href="https://aistudio.google.com/app/apikey"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-brand-500 hover:underline text-[11px]"
+                    >
+                      무료 키 발급 ➔
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <input
+                      type={showKey ? "text" : "password"}
+                      value={geminiKey}
+                      onChange={(e) => setGeminiKey(e.target.value)}
+                      placeholder="AIzaSy..."
+                      className="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-mono focus:ring-2 focus:ring-brand-500"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowKey(!showKey)}
+                      className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 text-[11px]"
+                    >
+                      {showKey ? "숨기기" : "보기"}
+                    </button>
+                  </div>
+                  <p className="text-[11px] text-slate-400">
+                    API Key는 서버로 전송되지 않고 브라우저의 localStorage에만 안전하게 저장됩니다.
+                  </p>
+                </div>
+              )}
+
+              {/* OpenAI Key Input */}
+              {provider === 'openai' && (
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <label className="font-semibold text-slate-700 dark:text-slate-300">
+                      OpenAI API Key
+                    </label>
+                    <a
+                      href="https://platform.openai.com/api-keys"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-brand-500 hover:underline text-[11px]"
+                    >
+                      OpenAI 키 관리 ➔
+                    </a>
+                  </div>
+                  <div className="relative">
+                    <input
+                      type={showKey ? "text" : "password"}
+                      value={openaiKey}
+                      onChange={(e) => setOpenaiKey(e.target.value)}
+                      placeholder="sk-proj-..."
+                      className="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-mono focus:ring-2 focus:ring-brand-500"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowKey(!showKey)}
+                      className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 text-[11px]"
+                    >
+                      {showKey ? "숨기기" : "보기"}
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* Demo Mode Notice */}
+              {provider === 'demo' && (
+                <div className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200/80 dark:border-amber-900/60 text-amber-800 dark:text-amber-300 space-y-1">
+                  <div className="font-bold">💡 데모 모드 안내</div>
+                  <p className="text-[11px] leading-relaxed">
+                    API Key 없이도 1분 스피킹, 음성 인식, 3단계 원어민 첨삭 리포트 및 플래시카드 기능을 구조 확인용 실감 나는 Mock 데이터로 무제한 무료 테스트하실 수 있습니다.
+                  </p>
+                </div>
+              )}
+
+              <div className="flex items-center justify-end gap-2 pt-3 border-t border-slate-200 dark:border-slate-800">
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100"
+                >
+                  취소
+                </button>
+                <button
+                  type="submit"
+                  className="px-5 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-md shadow-brand-500/20"
+                >
+                  설정 저장
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      );
+    }
+
+    // Render the App into the root DOM element
+    const rootElement = document.getElementById('root');
+    ReactDOM.createRoot(rootElement).render(<App />);
+  </script>
+</body>
+</html>
